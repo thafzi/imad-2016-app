@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-        var article-One= {
+ var articles = {
+         'article-one' : {
             title : 'Article-one|thafseer' ,
             heading : 'Article-one',
             date : 's0ep 25 2016',
@@ -15,10 +15,26 @@ var articles={
                     <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
                    </p>
                     <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
-                   </p>
+                   </p>`
                    
-                    },
-        };
+        },
+         'article-two' :{
+            title : 'Article-two|thafseer' ,
+            heading : 'Article-two',
+            date : 's0ep 20 2016',
+            content : ` <p> This is the second Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>
+                    <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>`
+                   },
+         'article-three' :{
+             title : 'Article-three|thafseer' ,
+            heading : 'Article-three',
+            date : 's0ep 18 2016',
+            content : ` <p> This is the third Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>`
+        }
+ };
         
 
 function CreateTemplate (data)
@@ -60,8 +76,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
- res.send(CreateTemplate(articleOne))
+app.get('/:articleName', function (req, res) {
+ res.send(CreateTemplate(articles[articleName]))
 });
 
 app.get('/article-two', function (req, res) {
