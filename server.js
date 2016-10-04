@@ -16,7 +16,9 @@ var articleOne ={
             <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
            </p> `  
 };
-Function HtmlTemplate(data){
+
+function CreateTemplate (data)
+{
     var title=data.title;
     var heading=data.heading;
     var date=data.date;
@@ -46,7 +48,7 @@ Function HtmlTemplate(data){
             </div>
         </body>
     </HTML> `;
-    return HtmlTemplate;
+    return templateHtml;
 
 }
 
@@ -55,7 +57,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
- res.send(HtmlTemplate(articleOne))
+ res.send(CreateTemplate(articleOne))
 });
 
 app.get('/article-two', function (req, res) {
