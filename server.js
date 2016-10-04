@@ -5,17 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne ={
-    title : 'Article-one|thafseer' ,
-    heading : 'Article-one',
-    date : 's0ep 25 2016',
-    content : ` <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
-           </p>
-            <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
-           </p>
-            <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
-           </p> `  
-};
+var articles={
+        var article-One= {
+            title : 'Article-one|thafseer' ,
+            heading : 'Article-one',
+            date : 's0ep 25 2016',
+            content : ` <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>
+                    <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>
+                    <p> This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article  This is the first Article
+                   </p>
+                   
+                    },
+        };
+        
 
 function CreateTemplate (data)
 {
